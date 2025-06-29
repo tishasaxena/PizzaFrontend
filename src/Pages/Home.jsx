@@ -2,7 +2,9 @@ import InterfaceArrowsRightArrowRightKeyboard from "../Components/Icons/ArrowRig
 import { PatchCheck } from "../Components/Icons/IconPatchCheck";
 import PizzaImage from '../assets/Images/pizza2.png';
 import CookingImage from '../assets/Images/cooking1.png';
-
+import OrderFood from '../assets/Images/orderFood.png';
+import Pickup from '../assets/Images/pickup.png';
+import Enjoy from '../assets/Images/enjoy.png';
 
 function Home() {
     return (
@@ -98,6 +100,69 @@ function Home() {
                                 <PatchCheck className="text-[#F38339] w-10 h-10 mr-4"/>
                                <span className="font-bold title-font"> Food hygiene guaranteed</span>
                             </div>
+                        </div>
+
+                        <div className="px-5 py-4 mx-auto">
+                            <div className="flex justify-center py-4">
+
+                                <div className="inline-flex w-16 h-1 bg-yellow-500 rounded-full"> </div>
+
+                            </div>
+
+                            <div className="flex flex-wrap space-y-6 md:space-y-0">
+                            
+                              <div className="flex flex-col items-center text-center md:w-1/3">
+                                  <div className="inline-flex items-center justify-center flex-shrink-0 w-20 h-20 mb-5 bg-yellow-100 rounded-full">
+                                    <img src={OrderFood} />
+                                  </div>
+                                  
+                                  
+                                  <div className="flex-grow">
+                                     <h2 className="mb-3 text-lg font-bold text-gray-900 title-font">
+                                        Order Food
+                                     </h2>
+                                     <p className="text-base leading-relaxed">
+                                        As easy as 1, 2, 3. Just select your favorite pizza and place your order.
+                                     </p>
+                                  </div>
+
+                              </div>
+
+                               <div className="flex flex-col items-center text-center md:w-1/3">
+                                  <div className="inline-flex items-center justify-center flex-shrink-0 w-20 h-20 mb-5 bg-yellow-100 rounded-full">
+                                    <img src={Pickup} />
+                                  </div>
+                                  
+                                  
+                                  <div className="flex-grow">
+                                     <h2 className="mb-3 text-lg font-bold text-gray-900 title-font">
+                                        Pickup Food
+                                     </h2>
+                                     <p className="text-base leading-relaxed">
+                                        Pickup your food from the nearest store. No delivery charges
+                                     </p>
+                                  </div>
+
+                              </div>
+
+                               <div className="flex flex-col items-center text-center md:w-1/3">
+                                  <div className="inline-flex items-center justify-center flex-shrink-0 w-20 h-20 mb-5 bg-yellow-100 rounded-full">
+                                    <img src={Enjoy} />
+                                  </div>
+                                  
+                                  
+                                  <div className="flex-grow">
+                                     <h2 className="mb-3 text-lg font-bold text-gray-900 title-font">
+                                        Enjoy Food
+                                     </h2>
+                                     <p className="text-base leading-relaxed">
+                                      As soon as you get your food, enjoy it with your family and friends.
+                                     </p>
+                                  </div>
+
+                              </div>
+                            </div>
+
                         </div>
 
                     </div>
