@@ -5,9 +5,11 @@ import CookingImage from '../assets/Images/cooking1.png';
 import OrderFood from '../assets/Images/orderFood.png';
 import Pickup from '../assets/Images/pickup.png';
 import Enjoy from '../assets/Images/enjoy.png';
+import Layout from "../Layouts/Layout";
 
 function Home() {
     return (
+        <Layout>
         <div>
             {/* Hero Section*/}
 
@@ -170,6 +172,7 @@ function Home() {
 
             </section>
         </div>
+        </Layout>
     );
 }
 
