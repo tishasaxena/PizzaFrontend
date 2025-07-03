@@ -2,10 +2,15 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import toast from "react-hot-toast"; 
 import SignupPresentation from "./SignupPresentation";
+import { useDispatch } from "react-redux";
+import { createAccount } from "../../Redux/Slices/AuthSlice";
+import { useNavigate } from "react-router-dom";
 
 //Container
 function Signup() {
-    
+
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const [signUpState, setSignUpState] = useState({
         firstName: "",
@@ -23,7 +28,7 @@ function Signup() {
 
     }
 
-    function handleFormSubmit(e){
+    async function handleFormSubmit(e){
         e.preventDefault(); // Prevent the form from reloading the page
         console.log(signUpState)
 
@@ -54,6 +59,11 @@ function Signup() {
             return;
         }
 
+        const apiresponse = await dispatch(createAccount(signUpState));
+        console.log("api response", apiresponse);
+         if(apiresponse.payload.data.success){
+           navigate('/auth/login');
+            };
     }
 
 

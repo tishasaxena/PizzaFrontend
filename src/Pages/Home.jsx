@@ -8,6 +8,7 @@ import Enjoy from '../assets/Images/enjoy.png';
 import Layout from "../Layouts/Layout";
 
 function Home() {
+ 
     return (
         <Layout>
         <div>
