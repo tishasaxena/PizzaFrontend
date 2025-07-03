@@ -5,6 +5,8 @@ import Layout from './Layouts/Layout'
 import Signup from './Pages/Auth/Signup'
 import Login from './Pages/Auth/Login'
 import NotFound from './Pages/Auth/NotFound'
+import Denied from './Pages/Denied'
+import AddProduct from './Pages/Admin/Addproduct'
 
 function App() {
  
@@ -13,9 +15,13 @@ function App() {
      <>
      <Routes>
         <Route path="/" element={<Home />} />
+         <Route path="/denied" element={<Denied />} />
         <Route path='/auth/signup' element={<Signup />} />
         <Route path='/auth/login' element={<Login />} />
+
+          <Route path='/admin/addProduct' element={<AddProduct />} />
          <Route path='*' element={<NotFound />} />
+
      </Routes>
      </>
   )
