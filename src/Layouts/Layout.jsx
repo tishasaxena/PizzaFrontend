@@ -1,7 +1,15 @@
+import { useSelector } from 'react-redux';
 import Pizzalogo from '../assets/Images/pizza1.png'
 import Footer from '../Components/Footer'
+import { Link } from 'react-router-dom';
 
 function Layout( {children}){
+
+    const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
+
+    async function handleLogout(e) {
+        
+    }
     return (
        <div>
            
@@ -32,6 +40,18 @@ function Layout( {children}){
                              <p>About {' '}</p>
                         </li>
                         
+                    </ul>
+                </div>
+
+                <div>
+                    <ul className='flex gap-4'>
+                        <li  className='hover:text-[#FF9110]'>
+                            {isLoggedIn ? (
+                                <Link onClick={handleLogout}>Logout</Link>
+                            ) : (
+                                <Link to={'/auth/login'}>Login</Link>
+                            )}
+                        </li>
                     </ul>
                 </div>
             </nav>
