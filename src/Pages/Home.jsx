@@ -6,9 +6,20 @@ import OrderFood from '../assets/Images/orderFood.png';
 import Pickup from '../assets/Images/pickup.png';
 import Enjoy from '../assets/Images/enjoy.png';
 import Layout from "../Layouts/Layout";
+import { useDispatch, useSelector } from "react-redux";
+import { getAllProducts } from "../Redux/Slices/ProductSlice";
+import { useEffect } from "react";
 
 function Home() {
- 
+
+    const dispatch = useDispatch();
+
+    const { productsData } = useSelector((state) => state.product);
+
+    useEffect(() => {
+        // This will be called when the component mounts
+        dispatch(getAllProducts());
+    }, []);
     return (
         <Layout>
         <div>
@@ -172,6 +183,10 @@ function Home() {
                 </div>
 
             </section>
+
+            {/* Products Section */}
+            { productsData.map((product) => <div key = {product._id}>{product.productName}</div>)}
+
         </div>
         </Layout>
     );

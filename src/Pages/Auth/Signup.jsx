@@ -13,10 +13,10 @@ function Signup() {
     const navigate = useNavigate();
 
     const [signUpState, setSignUpState] = useState({
-        firstName: "",
-        email: "",
-        mobileNumber: "",
-        password: ""
+        firstName: '',
+        email: '',
+        mobileNumber: '',
+        password: ''
     });
 
     function handleUserInput(e) {
