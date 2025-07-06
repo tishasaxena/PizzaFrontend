@@ -1,9 +1,9 @@
+// src/Helpers/axiosInstance.js
 import axios from "axios";
 
-const axiosInstance = axios.create();// Create a new axios instance
+const axiosInstance = axios.create({
+  baseURL: import.meta.env.VITE_BACKEND_URL,  // ✅ Set at creation
+  withCredentials: true,                      // ✅ Enable cookies
+});
 
-axiosInstance.defaults.baseURL = import.meta.env.VITE_BACKEND_URL ;// Set the base URL for the axios instance
-
-axiosInstance.defaults.withCredentials = true;// Allow cookies  to be sent with requests
-
-export default axiosInstance;// Export the axios instance for use in other parts of the application
+export default axiosInstance;
