@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import axiosInstance from '../../Helpers/axiosinstance';
+import axiosInstance from '../../Helpers/axiosInstance';
 import toast from 'react-hot-toast';
 
 
@@ -24,6 +24,26 @@ const initialState = {
         toast.error('Something went wrong ');    
     }
 })
+
+ export const getproductDetails = createAsyncThunk ('/products/getDetails', async (id) =>{
+    try {
+        const product = axiosInstance.get(`/products/${id}`);
+        toast.promise(product, {
+            loading: 'loading the product',
+            error: 'Something went wrong cannot load product',
+            success: 'product loaded successfully!',
+           
+        });
+        const apiResponse = await product;
+        return apiResponse;
+
+    } catch (error) {
+        console.log(error);
+        toast.error('Something went wrong ');    
+    }
+})
+
+
 
 
 const productSlice = createSlice({
