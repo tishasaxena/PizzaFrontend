@@ -9,29 +9,37 @@ import Denied from './Pages/Denied'
 import AddProduct from './Pages/Admin/Addproduct'
 import ProductDetails from './Pages/Products/ProductDetails'
 import CartDetails from './Pages/Cart/CartDetails'
+import Order from './Pages/Order/Order'
+import OrderSuccess from './Pages/Order/OrderSuccess'
+import RequireAuth from './Components/Auth/RequireAuth'
 
 
 function App() {
  
 
   return (
-     <>
-     <Routes>
+       <>
+      <Routes>
         <Route path="/" element={<Home />} />
-         <Route path="/denied" element={<Denied />} />
+        <Route path="/denied" element={<Denied />} />
         <Route path='/auth/signup' element={<Signup />} />
         <Route path='/auth/login' element={<Login />} />
 
-     <Route path='/cart' element={<CartDetails />} />
 
+        <Route element={<RequireAuth />}>
+          <Route path='/order' element={<Order />} />
 
-          <Route path='/admin/addProduct' element={<AddProduct />} />
-           <Route path='/product/:productId' element={<ProductDetails />} />
-       
-         <Route path='*' element={<NotFound />} />
+          <Route path='/order/success' element={<OrderSuccess />} />
+          <Route path='/cart' element={<CartDetails />} />
 
-     </Routes>
-     </>
+        </Route>
+        
+
+        <Route path='/admin/addProduct' element={<AddProduct />} />
+        <Route path='/product/:productId' element={<ProductDetails />} />
+        <Route path='*' element={<NotFound />} />
+      </Routes>
+    </>
   )
 }
 
