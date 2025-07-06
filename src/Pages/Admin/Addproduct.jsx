@@ -1,5 +1,5 @@
 import Layout from "../../Layouts/Layout";
-import Food from "../../Assets/Images/Food.svg";
+import Food from "../../Assets/Images/food.svg";
 
 function AddProduct(){
     return (
