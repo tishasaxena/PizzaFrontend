@@ -18,7 +18,7 @@ function AddProduct(){
                     </h2>
 
                         
-
+ 
                     <form >
 
                           {/** Product name */}
