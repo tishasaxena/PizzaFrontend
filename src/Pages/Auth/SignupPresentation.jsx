@@ -209,7 +209,7 @@ function SignupPresentation({handleUserInput, handleFormSubmit}){
                         name="password"
                         required
                         onChange={handleUserInput}
-                        placeholder="Enter your password"
+                        placeholder="Enter your password of 7 characters"
                         className="w-full px-3 py-1 text-base
                         leading-8 text-gray-700 transition-colors duration-200 ease-in-out border border-gray-300
                         rounded outline-none focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200" />
