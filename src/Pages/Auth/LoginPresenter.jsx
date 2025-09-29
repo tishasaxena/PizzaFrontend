@@ -170,7 +170,7 @@ function LoginPresentation({ handleFormSubmit, handleUserInput }) {
                                 name="password" 
                                 onChange={handleUserInput}
                                 required 
-                                placeholder="Enter your password"
+                                placeholder="Enter your password of 7 characters"
                                 className="w-full px-3 py-1 mt-2 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out border border-gray-300 rounded outline-noe focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200" />
                         </div>
 
