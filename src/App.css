@@ -1,0 +1,4 @@
+/* Add this to src/App.css or your main CSS file */
+html {
+  scroll-behavior: smooth;
+}

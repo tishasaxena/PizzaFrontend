@@ -53,8 +53,9 @@ function Layout({ children }) {
                     <ul className='flex gap-4'>
 
                         <li className='hover:text-[#FF9110]'>
-                            { ' ' }
-                            <p>Menu {' '}</p>
+                            <a href="/#products">
+                                <p>Menu</p>
+                            </a>
                         </li>
 
                         <li className='hover:text-[#FF9110]'>

@@ -180,7 +180,7 @@ function Home() {
 
             </section>
 
-            <div className="mx-auto">
+            <div id="products" className="mx-auto">
                 <div className="flex flex-wrap justify-center">
                     {productsData.map((item) => {
                         return (
