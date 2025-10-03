@@ -256,23 +256,23 @@ function Home() {
                         </div>
                     </div>
                 </div>
-                <div className="flex justify-center mt-10">
-  <iframe
-    title="Delivery Location"
-    width="350"
-    height="250"
-    style={{ border: 0, borderRadius: '12px' }}
-    loading="lazy"
-    allowFullScreen
-    src="https://www.openstreetmap.org/export/embed.html?bbox=77.5946%2C12.9716%2C77.5946%2C12.9716&amp;layer=mapnik&amp;marker=12.9716%2C77.5946"
-  ></iframe>
-</div>
-<p className="mt-4 text-sm text-gray-500">
-  Track your delivery location on the map above!
-</p>
-
-{/* Chatbot Widget */}
-<div className="flex justify-center mt-10">
+                <div className="flex flex-col md:flex-row justify-center items-start gap-8 mt-10">
+  {/* Map */}
+  <div className="flex-shrink-0">
+    <iframe
+      title="Delivery Location"
+      width="350"
+      height="250"
+      style={{ border: 0, borderRadius: '12px' }}
+      loading="lazy"
+      allowFullScreen
+      src="https://www.openstreetmap.org/export/embed.html?bbox=77.5946%2C12.9716%2C77.5946%2C12.9716&amp;layer=mapnik&amp;marker=12.9716%2C77.5946"
+    ></iframe>
+    <p className="mt-4 text-sm text-gray-500 text-center">
+      Track your delivery location on the map above!
+    </p>
+  </div>
+  {/* Chatbot Widget */}
   <div className="w-full max-w-md bg-white rounded-xl shadow-lg p-6 border border-yellow-200">
     <div className="flex items-center mb-4">
       <span className="inline-block w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center text-white text-2xl mr-3">🤖</span>
