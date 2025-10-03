@@ -37,7 +37,7 @@ function App() {
 
        {/* <Route path='/admin/addProduct' element={<AddProduct />} /> */}
 
-         <Route element={<RequireAuth role="admin" />}>
+         <Route element={<RequireAuth role="ADMIN" />}>
           <Route path='/admin/addProduct' element={<AddProduct />} />
         </Route>
         <Route path='/product/:productId' element={<ProductDetails />} />
