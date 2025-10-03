@@ -71,22 +71,6 @@ function Home() {
 
             </section>
 
-            {/* About section */}
-            <section
-                id="about"
-                className="py-8 bg-white"
-            >
-                <div className="container mx-auto px-4 text-center">
-                    <h2 className="mb-4 text-4xl font-extrabold text-orange-500">About Us</h2>
-                    <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-                        Welcome to Pizza App! We are passionate about delivering the best pizza experience right to your doorstep. 
-                        Our pizzas are made with the freshest ingredients and cooked by world-class chefs. 
-                        Whether you’re craving a classic Margherita or something more adventurous, we’ve got you covered. 
-                        Enjoy fast delivery, great taste, and a slice of happiness every time you order!
-                    </p>
-                </div>
-            </section>
-
             {/* Services section */}
             <section
                 id="services"
@@ -231,6 +215,47 @@ function Home() {
                     })}
                 </div>
             </div>
+
+            {/* About Us section at the end with better styling */}
+            <section
+                id="about"
+                className="py-16 bg-gradient-to-r from-orange-100 to-yellow-50 border-t border-orange-200"
+            >
+                <div className="container mx-auto px-4 text-center">
+                    <h2 className="mb-6 text-4xl md:text-5xl font-extrabold text-transparent bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text drop-shadow-lg">
+                        About Us
+                    </h2>
+                    <div className="max-w-2xl mx-auto">
+                        <p className="text-lg md:text-xl text-gray-700 mb-6 leading-relaxed">
+                            Welcome to <span className="font-bold text-orange-500">Pizza App</span>! We are passionate about delivering the best pizza experience right to your doorstep.
+                        </p>
+                        <p className="text-base md:text-lg text-gray-600 mb-4">
+                            Our pizzas are made with the freshest ingredients and crafted by world-class chefs. Whether you’re craving a classic Margherita or something more adventurous, we’ve got you covered.
+                        </p>
+                        <p className="text-base md:text-lg text-gray-600 mb-4">
+                            Enjoy fast delivery, great taste, and a slice of happiness every time you order. Your satisfaction is our top priority!
+                        </p>
+                        <div className="flex justify-center gap-6 mt-8">
+                            <img src="/pizza-slice.png" alt="Pizza Slice" className="w-16 h-16 rounded-full shadow-lg border-2 border-yellow-400 bg-white" />
+                            <img src="/chef.png" alt="Chef" className="w-16 h-16 rounded-full shadow-lg border-2 border-orange-300 bg-white" />
+                        </div>
+                    </div>
+                </div>
+                <div className="flex justify-center mt-10">
+  <iframe
+    title="Delivery Location"
+    width="350"
+    height="250"
+    style={{ border: 0, borderRadius: '12px' }}
+    loading="lazy"
+    allowFullScreen
+    src="https://www.openstreetmap.org/export/embed.html?bbox=77.5946%2C12.9716%2C77.5946%2C12.9716&amp;layer=mapnik&amp;marker=12.9716%2C77.5946"
+  ></iframe>
+</div>
+<p className="mt-4 text-sm text-gray-500">
+  Track your delivery location on the map above!
+</p>
+            </section>
 
         </div>
         </Layout>
