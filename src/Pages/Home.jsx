@@ -31,16 +31,13 @@ function Home() {
             >
                 <div className="w-4/6 ml-4 text-center md:w-2/6 md:text-left">
 
-                    <div className="flex justify-center text-4xl md:justify-normal">
-
-                        <h1 className="pb-5 font-bold text-transparent bg-gradient-to-r from-orange-500 to-orange-400 bg-clip-text">
-                            
-                            Enjoy the Slice {' '}
-                        </h1>
-                        <h1>
-                            😋
-                        </h1>
-
+                    <div className="flex flex-col items-center md:items-start text-4xl md:text-5xl font-extrabold pb-5">
+                        <span className="bg-gradient-to-r from-orange-500 to-yellow-400 bg-clip-text text-transparent drop-shadow-lg">
+                            Satisfy Your Cravings,
+                        </span>
+                        <span className="bg-gradient-to-r from-yellow-500 to-orange-400 bg-clip-text text-transparent drop-shadow-lg">
+                            One Slice at a Time! 🍕
+                        </span>
                     </div>
 
 
@@ -51,6 +48,12 @@ function Home() {
 
                     <button
                         className="flex items-center px-4 py-2 text-white bg-yellow-500 rounded-md hover:bg-yellow-600 group"
+                        onClick={() => {
+                            const productsSection = document.getElementById('products');
+                            if (productsSection) {
+                                productsSection.scrollIntoView({ behavior: 'smooth' });
+                            }
+                        }}
                     >
                         Order Now 
                         <span className="inline-block ml-3 transition-transform ease-in-out group-hover:translate-x-2">
