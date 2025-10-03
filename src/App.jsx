@@ -35,7 +35,11 @@ function App() {
         </Route>
         
 
-        <Route path='/admin/addProduct' element={<AddProduct />} />
+       {/* <Route path='/admin/addProduct' element={<AddProduct />} /> */}
+
+         <Route element={<RequireAuth role="admin" />}>
+          <Route path='/admin/addProduct' element={<AddProduct />} />
+        </Route>
         <Route path='/product/:productId' element={<ProductDetails />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
