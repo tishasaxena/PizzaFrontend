@@ -236,8 +236,8 @@ function Home() {
                             Enjoy fast delivery, great taste, and a slice of happiness every time you order. Your satisfaction is our top priority!
                         </p>
                         <div className="flex justify-center gap-6 mt-8">
-                            <img src="/pizza-slice.png" alt="Pizza Slice" className="w-16 h-16 rounded-full shadow-lg border-2 border-yellow-400 bg-white" />
-                            <img src="/chef.png" alt="Chef" className="w-16 h-16 rounded-full shadow-lg border-2 border-orange-300 bg-white" />
+                            <img src={OrderFood} alt="Order Food" className="w-16 h-16 rounded-full shadow-lg border-2 border-yellow-400 bg-white" />
+                            <img src={CookingImage} alt="Chef" className="w-16 h-16 rounded-full shadow-lg border-2 border-orange-300 bg-white" />
                         </div>
                     </div>
                 </div>
