@@ -59,13 +59,15 @@ function Layout({ children }) {
                         </li>
 
                         <li className='hover:text-[#FF9110]'>
-                            { ' ' }
-                            <p>Services {' '}</p>
+                            <a href="/#services">
+                                <p>Services</p>
+                            </a>
                         </li>
 
                         <li className='hover:text-[#FF9110]'>
-                            { ' ' }
-                            <p>About {' '}</p>
+                            <a href="/#about">
+                                <p>About</p>
+                            </a>
                         </li>
 
                     </ul>

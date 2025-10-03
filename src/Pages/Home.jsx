@@ -71,9 +71,25 @@ function Home() {
 
             </section>
 
+            {/* About section */}
+            <section
+                id="about"
+                className="py-8 bg-white"
+            >
+                <div className="container mx-auto px-4 text-center">
+                    <h2 className="mb-4 text-4xl font-extrabold text-orange-500">About Us</h2>
+                    <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+                        Welcome to Pizza App! We are passionate about delivering the best pizza experience right to your doorstep. 
+                        Our pizzas are made with the freshest ingredients and cooked by world-class chefs. 
+                        Whether you’re craving a classic Margherita or something more adventurous, we’ve got you covered. 
+                        Enjoy fast delivery, great taste, and a slice of happiness every time you order!
+                    </p>
+                </div>
+            </section>
 
             {/* Services section */}
             <section
+                id="services"
                 className="py-4 mt-6 bg-gradient-to-r from-amber-50 to-orange-300"
             >
                 <div className="container flex flex-col md:flex-row">
@@ -215,8 +231,6 @@ function Home() {
                     })}
                 </div>
             </div>
-
-            
 
         </div>
         </Layout>
