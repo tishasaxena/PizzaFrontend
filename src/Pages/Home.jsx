@@ -8,7 +8,7 @@ import Pickup from '../assets/Images/pickup.png';
 import Enjoy from '../assets/Images/enjoy.png';
 import Layout from "../Layouts/Layout";
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { getAllProducts } from "../Redux/Slices/ProductSlice";
 import { Link } from "react-router-dom";
 function Home() { 
@@ -21,6 +21,20 @@ function Home() {
         dispatch(getAllProducts());
     }, []);
 
+    // Add this state and effect for toggling header
+    const phrases = [
+        "Satisfy Your Cravings,",
+        "One Slice at a Time! 🍕"
+    ];
+    const [currentPhrase, setCurrentPhrase] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentPhrase((prev) => (prev + 1) % phrases.length);
+        }, 2000); // Change phrase every 2 seconds
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <Layout>
         <div>
@@ -31,12 +45,10 @@ function Home() {
             >
                 <div className="w-4/6 ml-4 text-center md:w-2/6 md:text-left">
 
-                    <div className="flex flex-col items-center md:items-start text-4xl md:text-5xl font-extrabold pb-5">
-                        <span className="bg-gradient-to-r from-orange-500 to-yellow-400 bg-clip-text text-transparent drop-shadow-lg">
-                            Satisfy Your Cravings,
-                        </span>
-                        <span className="bg-gradient-to-r from-yellow-500 to-orange-400 bg-clip-text text-transparent drop-shadow-lg">
-                            One Slice at a Time! 🍕
+                    <div className="flex flex-col items-center md:items-start text-4xl md:text-5xl font-extrabold pb-5 min-h-[60px]">
+                        <span className="bg-gradient-to-r from-orange-500 to-yellow-400 bg-clip-text text-transparent drop-shadow-lg transition-opacity duration-700"
+                              key={currentPhrase}>
+                            {phrases[currentPhrase]}
                         </span>
                     </div>
 
@@ -258,6 +270,26 @@ function Home() {
 <p className="mt-4 text-sm text-gray-500">
   Track your delivery location on the map above!
 </p>
+
+{/* Chatbot Widget */}
+<div className="flex justify-center mt-10">
+  <div className="w-full max-w-md bg-white rounded-xl shadow-lg p-6 border border-yellow-200">
+    <div className="flex items-center mb-4">
+      <span className="inline-block w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center text-white text-2xl mr-3">🤖</span>
+      <span className="font-bold text-lg text-gray-800">PizzaBot</span>
+    </div>
+    <div className="bg-yellow-50 rounded-lg p-4 text-gray-700 mb-3">
+      Hi! 👋 I'm PizzaBot. How can I help you today?
+    </div>
+    <input
+      type="text"
+      className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-yellow-400"
+      placeholder="Type your message..."
+      disabled
+    />
+    <p className="text-xs text-gray-400 mt-2">*Chatbot demo UI only</p>
+  </div>
+</div>
             </section>
 
         </div>
